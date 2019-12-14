@@ -1,0 +1,15 @@
+<div style="text-align:center">
+  <label>City Name</label> <input type="text" [(ngModel)]="city" required />
+  <button (click)="checkCity()">Search</button>
+  <ul>
+    <li *ngFor="let item of Weather | keyvalue">
+      <label>{{ item.key }}: {{ item.value }}</label>
+    </li>
+    <li>
+      <label>{{requestData}}</label>
+    </li>
+
+  </ul>
+  <!-- <app-list></app-list> -->
+  <router-outlet></router-outlet>
+</div>
